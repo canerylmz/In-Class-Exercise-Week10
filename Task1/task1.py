@@ -61,7 +61,7 @@ def run_generation():
     print_section("3) Text Generation")
     generator = pipeline("text-generation", model="gpt2")
 
-    prompt = "If I continue to successfully complete all in-class exercises in EE471 course,"
+    prompt = "If I continue to successfully complete all in-class exercises in software course,"
     outputs = generator(
         prompt,
         max_new_tokens=35,
@@ -139,7 +139,7 @@ In the early 2000s, low interest rates and a push for homeownership led banks to
 loans to borrowers with poor credit.
 """
 
-    result = summarizer(long_text, max_length=50, min_length=20, do_sample=False)
+    result = summarizer(long_text, max_length=70, min_length=30, do_sample=False)
     print(result[0]["summary_text"].strip())
 
 

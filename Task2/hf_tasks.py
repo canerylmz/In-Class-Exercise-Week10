@@ -59,7 +59,7 @@ class HuggingFaceTaskModule:
 
     def summarization(self, text):
         pipe = self.get_pipe("summarization", "summarization")
-        result = pipe(text, max_length=60, min_length=20, do_sample=False)
+        result = pipe(text, max_length=70, min_length=30, do_sample=False)
         return result[0]["summary_text"]
 
     def translation(self, text):
